@@ -4,11 +4,15 @@ var tour = {
   steps: [
     {
       title: "Navigation improvements!",
-      content: "We've improved the navigation for the Docker documentation!<br /><br />This short tour takes less than a minute. It highlights the changes, then returns you to the current page. You'll learn about:<br /><ul><li>New top navigation</li><li>Left-hand navigation</li><li>Feedback links</li><li>In-page navigation</li></ul>",
+      content: "We've improved the navigation for the Docker documentation!<br /><br /><b>This tour takes less than a minute.</b><br /><br />It highlights and explains each improvement, then returns you to the current page.<br /><br />You'll learn about:<br /><ul><li>New top navigation</li><li>Left-hand navigation</li><li>Feedback links</li><li>In-page navigation</li></ul>",
       target: "main-content",
       placement: "top",
       xOffset: "center",
       yOffset: "300px",
+      multipage: "true",
+      onNext: function() {
+        window.location = "/engine/swarm/admin_guide/";
+      },
       onShow: function () {
         // Hide the arrow on the first navigation bubble
         $('.hopscotch-bubble-arrow-container').css('visibility', 'hidden');
@@ -71,24 +75,20 @@ var tour = {
       target: "left-nav",
       placement: "right",
       yOffset: "100px",
-      arrowOffset: "center",
+      arrowOffset: "center"
     },
     {
       title: "Feedback Links",
       content: "Use the feedback links to edit the page, provide feedback, or find out how to get support.",
       target: "feedback-links",
       placement: "left",
-      arrowOffset: "center",
-      multipage: "true",
-      onNext: function() {
-        window.location = "/compose/compose-file/";
-      }
-    },
+      arrowOffset: "center"    },
     {
       title: "In-page navigation",
       content: "Use the in-page navigation links to jump to specific areas within the page you are viewing.<br />This is especially helpful on pages with a lot of content.",
       target: "side-toc",
       placement: "left",
+      yOffset: "100px",
       arrowOffset: "center"
     }
   ],
