@@ -336,7 +336,7 @@
                     isRtl: defaultOpts.isRtl,
                     showNumber: !0,
                     isTourBubble: !0
-                }, a = typeof a === undefinedStr ? {} : a, utils.extend(e, a), this.opt = e, f.className = "hopscotch-bubble animated", e.isTourBubble ? (d = winHopscotch.getCurrTour(), d && utils.addClass(f, "tour-" + d.id)) : utils.addClass(f, "hopscotch-callout no-number"), b = function() {
+                }, a = typeof a === undefinedStr ? {} : a, utils.extend(e, a), this.opt = e, f.className = "hopscotch-bubble", e.isTourBubble ? (d = winHopscotch.getCurrTour(), d && utils.addClass(f, "tour-" + d.id)) : utils.addClass(f, "hopscotch-callout no-number"), b = function() {
                     !h && g.isShowing && (h = !0, setTimeout(function() {
                         g.setPosition(g.currStep), h = !1
                     }, 100))
